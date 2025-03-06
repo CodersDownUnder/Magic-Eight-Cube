@@ -3,6 +3,8 @@ plugins {
     id 'maven-publish'
     id 'net.neoforged.moddev' version '2.0.78'
     id 'idea'
+    id "com.hypherionmc.modutils.modpublisher" version "2.1.6"
+
 }
 
 tasks.named('wrapper', Wrapper).configure {
@@ -186,4 +188,70 @@ idea {
         downloadSources = true
         downloadJavadoc = true
     }
+}
+
+publisher {
+    // Setup the required API keys. You only need to define the keys for
+    // the platforms you plan on uploading to
+
+    apiKeys {
+        // Modrinth Token
+        modrinth project.providers.gradleProperty("MODRINTH_TOKEN").get()
+        // Curseforge Token
+        curseforge project.providers.gradleProperty("CURSEFORGE_TOKEN").get()
+    }
+
+    // Enable Debug mode. When enabled, no files will actually be uploaded
+    setDebug(true)
+
+    // Curseforge Project ID
+    setCurseID("355283")
+
+    // Modrinth Project ID
+    setModrinthID("aYVq1ijX")
+
+    // Type of release. beta, alpha or release
+    // You can also use VersionType.BETA, VersionType.ALPHA or VersionType.RELEASE
+    setVersionType("RELEASE")
+
+    // Changelog. This can be a file, string, OR, gist/github url
+    // For example: markdown.md, or "This is my changelog"
+    // Or: https://raw.githubusercontent.com/hypherionmc/changelogs/changelog.md
+    // Or https://gist.githubusercontent.com/hypherionmc/92f825d3c9337964cc77c9c8c9bf65e6/raw/ceeaaee5b98c688a23398864fe480b84796a1651/test_gist.md
+    setChangelog("changelog.md")
+
+    // Required for Modrinth/GitHub
+    setProjectVersion("1.21.4-${project.version}")
+
+    // Fancy display name for the upload.
+    // Will default to the project version if not set
+    setDisplayName("[1.21.4] Magic Eight Cube - ${project.version}")
+
+    // The supported game versions
+    setGameVersions("1.21.4")
+
+    // The modloaders your upload supports.
+    // This can also be an Enum from ModLoader,
+    // like setLoaders(ModLoader.FABRIC, ModLoader.FORGE)
+    setLoaders("neoforge")
+
+    // The new Curseforge Environment tag. Optional
+    // Valid values are "server", "client" or "both"
+    // You can also use CurseEnvironment.BOTH, or CurseEnvironment.SERVER or CurseEnvironment.CLIENT
+    setCurseEnvironment("both")
+
+    // Upload the release, but keep it "private" until you are ready
+    // Unreleased feature on CurseForge, working on Modrinth
+    setIsManualRelease(false)
+
+    // The file to be uploaded. This can be a file, task, or string.
+    // setArtifact("build/libs/mymod.jar")
+    // setArtifact(jar.getArchiveFile().get())
+    // If this is a task, the task specified will be executed before publishing
+    setArtifact(jar)
+
+    // Disable the built in Fractureizer scanner
+    setDisableMalwareScanner(true)
+
+
 }
