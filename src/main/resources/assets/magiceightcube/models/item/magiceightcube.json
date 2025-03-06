@@ -1,8 +1,8 @@
 {
 	"credit": "Made with Blockbench",
 	"textures": {
-		"0": "magiceightcube:items/eightball",
-		"particle": "magiceightcube:items/eightball"
+		"0": "magiceightcube:item/eightball",
+		"particle": "magiceightcube:item/eightball"
 	},
 	"elements": [
 		{

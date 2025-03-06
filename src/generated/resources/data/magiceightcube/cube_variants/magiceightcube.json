@@ -1,0 +1,33 @@
+{
+  "badphrases": [
+    "text.eightball.message1",
+    "text.eightball.message2",
+    "text.eightball.message3",
+    "text.eightball.message4",
+    "text.eightball.message5"
+  ],
+  "display_name": {
+    "translate": "item.magiceightcube.name"
+  },
+  "goodphrases": [
+    "text.eightball.message11",
+    "text.eightball.message12",
+    "text.eightball.message13",
+    "text.eightball.message14",
+    "text.eightball.message15",
+    "text.eightball.message16",
+    "text.eightball.message17",
+    "text.eightball.message18",
+    "text.eightball.message19",
+    "text.eightball.message20"
+  ],
+  "title": "magiceightcube",
+  "translatable": true,
+  "unsurephrases": [
+    "text.eightball.message6",
+    "text.eightball.message7",
+    "text.eightball.message8",
+    "text.eightball.message9",
+    "text.eightball.message10"
+  ]
+}

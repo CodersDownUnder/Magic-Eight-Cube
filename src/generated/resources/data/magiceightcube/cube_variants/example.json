@@ -1,0 +1,18 @@
+{
+  "badphrases": [
+    "no",
+    "Pay $1.99 for 5 more answers."
+  ],
+  "display_name": "Example Cube",
+  "goodphrases": [
+    "How Do You Keep An Idiot Amused? Please Shake For Answer.",
+    "Think, what would a Jedi do?",
+    "Don't do it, your friends are idiots."
+  ],
+  "title": "example",
+  "translatable": false,
+  "unsurephrases": [
+    "Go ask a real person.",
+    "Please shake again."
+  ]
+}
