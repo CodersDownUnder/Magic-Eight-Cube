@@ -9,7 +9,7 @@ public class MagicEightCubeLanguageProvider extends LanguageProvider {
         super(
                 // Provided by the `GatherDataEvent.Client`.
                 output,
-                "magiceightcube",
+                MagicEightCube.MODID,
                 "en_us"
         );
 

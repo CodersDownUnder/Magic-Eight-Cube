@@ -23,7 +23,7 @@ import java.util.List;
 import java.util.Optional;
 import java.util.concurrent.CompletableFuture;
 
-@EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD, modid = "magiceightcube")
+@EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD, modid = MagicEightCube.MODID)
 public class MagicEightCubeDatagenHandler {
     @SubscribeEvent
     public static void gatherData(GatherDataEvent.Client event) {

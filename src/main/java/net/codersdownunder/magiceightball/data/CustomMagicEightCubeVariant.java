@@ -1,19 +1,14 @@
 package net.codersdownunder.magiceightball.data;
 
 import com.mojang.serialization.Codec;
-import com.mojang.serialization.codecs.ListCodec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
-import io.netty.buffer.ByteBuf;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.network.RegistryFriendlyByteBuf;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.ComponentSerialization;
-import net.minecraft.network.codec.ByteBufCodecs;
 import net.minecraft.network.codec.StreamCodec;
-import net.minecraft.world.entity.animal.Cod;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 public record CustomMagicEightCubeVariant(
